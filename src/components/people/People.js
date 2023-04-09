@@ -1,6 +1,7 @@
 import React from "react";
 import { useQuery } from "react-query";
 import PeopleComponent from "./PeopleComponent";
+import Loader from "react-js-loader"
 
 const fetchPeople = async () => {
   const res = await fetch("https://swapi.dev/api/people/");
@@ -18,7 +19,13 @@ const People = () => {
       )) ||
         (status === "loading" && (
           <div>
-            <p>Loading the People Data</p>
+             <Loader
+                type="spinner-circle"
+                bgColor={"#FFFFFF"}
+                title={"Data Loading"}
+                color={"#FEEF3E"}
+                size={100}
+              />
           </div>
         )) ||
         (status === "success" && (

@@ -1,8 +1,8 @@
 import React from "react";
 
-const PlanetComponent = ({ planet }) => {
+const PlanetComponent = ({ planet, index }) => {
   return (
-    <div className="card">
+    <div className="card" key={index}>
       <h3>{planet.name}</h3>
       <p>Surface Water - {planet.surface_water}</p>
       <p>Climate - {planet.climate}</p>
