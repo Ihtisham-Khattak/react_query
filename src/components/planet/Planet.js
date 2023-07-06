@@ -20,6 +20,11 @@ const Planet = () => {
     fetchPlanet
   );
 
+  console.log(
+    "🚀 ~ file: Planet.js:19 ~ Planet ~ isPreviousData:",
+    isPreviousData
+  );
+
   return (
     <div>
       <h2>
@@ -57,6 +62,7 @@ const Planet = () => {
               <button
                 className="button"
                 onClick={() => {
+                  debugger;
                   if (!isPreviousData && data.hasMore) {
                     setPage((old) => old + 1);
                   }
