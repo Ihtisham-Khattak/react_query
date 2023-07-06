@@ -4,7 +4,7 @@ import PlanetComponent from "./PlanetComponent";
 import Loader from "react-js-loader";
 
 const fetchPlanet = async (key, page) => {
-  const res = await fetch('https://swapi.dev/api/planets/?page=2');
+  const res = await fetch("https://swapi.dev/api/planets/?page=2");
   return res.json();
 };
 const Planet = () => {
@@ -13,13 +13,12 @@ const Planet = () => {
   // 3. Query variable
 
   const [page, setPage] = useState(1);
-  console.log("🚀 ~ file: Planet.js:16 ~ Planet ~ page:", page)
+  console.log("🚀 ~ file: Planet.js:16 ~ Planet ~ page:", page);
 
   const { data, isFetching, isPreviousData, status } = useQuery(
     ["Planet", page],
     fetchPlanet
   );
-  console.log("🚀 ~ file: Planet.js:17 ~ Planet ~ data:", data);
 
   return (
     <div>

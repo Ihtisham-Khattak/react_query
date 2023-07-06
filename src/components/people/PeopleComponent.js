@@ -1,6 +1,6 @@
 import React from "react";
 
-const PeopleComponent = ({people}) => {
+const PeopleComponent = ({ people }) => {
   return (
     <div className="card">
       <h3>{people.name}</h3>

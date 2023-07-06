@@ -8,6 +8,7 @@ const fetchPeople = async () => {
   return await res.json();
 };
 const People = () => {
+
   const { data, status } = useQuery("People", fetchPeople);
 
   return (
@@ -16,7 +17,7 @@ const People = () => {
         <div>
           <p>Error</p>
         </div>
-      )) ||
+        )) ||
         (status === "loading" && (
           <div>
              <Loader
@@ -34,7 +35,8 @@ const People = () => {
               <PeopleComponent people={people} />
             ))}
           </div>
-        ))}
+        ))
+      }
     </div>
   );
 };
